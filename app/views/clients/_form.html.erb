@@ -1,0 +1,37 @@
+<%= form_for(@client) do |f| %>
+  <% if @client.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@client.errors.count, "error") %> prohibited this client from being saved:</h2>
+
+      <ul>
+      <% @client.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ФИО %><br>
+    <%= f.text_field :fio %>
+  </div>
+  <div class="field">
+    <%= f.label "Паспортные данные" %><br>
+    <%= f.text_field :passport %>
+  </div>
+  <div class="field">
+    <%= f.label "Водительские права №" %><br>
+    <%= f.text_field :licence %>
+  </div>
+  <div class="field">
+    <%= f.label "Дата начала вождения" %><br>
+    <%= f.datetime_select :drive_date_begin %>
+  </div>
+  <div class="field">
+    <%= f.label "Дата рождения" %><br>
+    <%= f.datetime_select :birthday %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,41 @@
+<%= form_for(@auto) do |f| %>
+  <% if @auto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@auto.errors.count, "error") %> prohibited this auto from being saved:</h2>
+
+      <ul>
+      <% @auto.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Клиент %><br>
+	<%= f.collection_select :client_id, Client.all, :id, :fio %>
+  </div>
+  <div class="field">
+    <%= f.label :Госномер %><br>
+    <%= f.text_field :gosnomer %>
+  </div>
+  <div class="field">
+    <%= f.label :Техпарспорт %><br>
+    <%= f.text_field :tech_passport %>
+  </div>
+  <div class="field">
+    <%= f.label "Марка и модель" %><br>
+    <%= f.text_field :marka_model %>
+  </div>
+  <div class="field">
+    <%= f.label "Дата выпуска" %><br>
+    <%= f.datetime_select :date_release %>
+  </div>
+  <div class="field">
+    <%= f.label :Цвет %><br>
+    <%= f.text_field :color %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

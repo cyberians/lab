@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails Lab2: development" uuid="c31b6ef0-7d5c-4a87-b573-d982f045d6f5">
+      <user-name>vladimir</user-name>
+      <schema-pattern>lab2_development.pg_catalog lab2_development.public</schema-pattern>
+      <default-schemas>lab2_development.public</default-schemas>
+    </data-source>
+  </component>
+</project>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Наименование:</strong>
+  <%= @insurance_type.name %>
+</p>
+
+<p>
+  <strong>Описание:</strong>
+  <%= @insurance_type.desc %>
+</p>
+
+<p>
+  <strong>Цена:</strong>
+  <%= @insurance_type.price %>
+</p>
+
+<%= link_to 'Edit', edit_insurance_type_path(@insurance_type) %> |
+<%= link_to 'Back', insurance_types_path %>

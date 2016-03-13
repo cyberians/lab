@@ -1,0 +1,29 @@
+<%= form_for @insurance_type, :html => {class: 'form-style-1'} do |f| %>
+  <% if @insurance_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@insurance_type.errors.count, "error") %> prohibited this insurance_type from being saved:</h2>
+
+      <ul>
+      <% @insurance_type.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Наименование %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :Описание %><br>
+    <%= f.text_area :desc %>
+  </div>
+  <div class="field">
+    <%= f.label :Цена %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

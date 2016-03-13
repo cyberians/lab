@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Insurance Types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Наименование</th>
+      <th>Описание</th>
+      <th>Цена</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @insurance_types.each do |insurance_type| %>
+      <tr>
+        <td><%= insurance_type.name %></td>
+        <td><%= insurance_type.desc %></td>
+        <td><%= insurance_type.price %></td>
+        <td><%= link_to 'Show', insurance_type %></td>
+        <td><%= link_to 'Edit', edit_insurance_type_path(insurance_type) %></td>
+        <td><%= link_to 'Destroy', insurance_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Insurance type', new_insurance_type_path %>

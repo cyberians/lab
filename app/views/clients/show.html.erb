@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>ФИО:</strong>
+  <%= @client.fio %>
+</p>
+
+<p>
+  <strong>Паспортные данные:</strong>
+  <%= @client.passport %>
+</p>
+
+<p>
+  <strong>Водительские права:</strong>
+  <%= @client.licence %>
+</p>
+
+<p>
+  <strong>Дата начала вождения:</strong>
+  <%= @client.drive_date_begin %>
+</p>
+
+<p>
+  <strong>Дата рождения:</strong>
+  <%= @client.birthday %>
+</p>
+
+<%= link_to 'Edit', edit_client_path(@client) %> |
+<%= link_to 'Back', clients_path %>

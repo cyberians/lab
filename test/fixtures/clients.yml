@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fio: MyString
+  passport: MyString
+  licence: MyString
+  drive_date_begin: 2016-02-29 10:10:28
+  birthday: 2016-02-29 10:10:28
+
+two:
+  fio: MyString
+  passport: MyString
+  licence: MyString
+  drive_date_begin: 2016-02-29 10:10:28
+  birthday: 2016-02-29 10:10:28

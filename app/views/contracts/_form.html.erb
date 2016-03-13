@@ -1,0 +1,41 @@
+<%= form_for(@contract) do |f| %>
+  <% if @contract.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contract.errors.count, "error") %> prohibited this contract from being saved:</h2>
+
+      <ul>
+      <% @contract.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Клиент %><br>
+	<%= f.collection_select :client_id, Client.all, :id, :fio %>
+  </div>
+  <div class="field">
+    <%= f.label "Тип страхования" %><br>
+	<%= f.collection_select :insurance_type_id, InsuranceType.all, :id, :name %>
+  </div>
+  <div class="field">
+    <%= f.label "Страховщик" %><br>
+	<%= f.collection_select :insurer_id, Insurer.all, :id, :fio %>
+  </div>
+  <div class="field">
+    <%= f.label "Автомобиль" %><br>
+	<%= f.collection_select :auto_id, Auto.all, :id, :marka_model %>
+  </div>
+  <div class="field">
+    <%= f.label "Дата начала страховки" %><br>
+    <%= f.datetime_select :date_begin %>
+  </div>
+  <div class="field">
+    <%= f.label "Дата окончания страховки" %><br>
+    <%= f.datetime_select :date_end %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

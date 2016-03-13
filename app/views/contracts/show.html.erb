@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Клиент:</strong>
+  <%= @contract.client.fio %>
+</p>
+
+<p>
+  <strong>Тип страхования :</strong>
+  <%= @contract.insurance_type.name %>
+</p>
+
+<p>
+  <strong>Страховщик:</strong>
+  <%= @contract.insurer.fio %>
+</p>
+
+<p>
+  <strong>Автомобиль:</strong>
+  <%= @contract.auto.marka_model %>
+</p>
+
+<p>
+  <strong>Дата начала страховки:</strong>
+  <%= @contract.date_begin %>
+</p>
+
+<p>
+  <strong>Дата окончания страховки:</strong>
+  <%= @contract.date_end %>
+</p>
+
+<%= link_to 'Edit', edit_contract_path(@contract) %> |
+<%= link_to 'Back', contracts_path %>
